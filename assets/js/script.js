@@ -8,8 +8,8 @@ $(document).ready(function () {
     console.log(fieldsValue)
   }
   // NRIC number validation if its a proper number
-  $('#entry_1331322704').blur(function () {
-    var icNum = document.getElementById('entry_1331322704').value
+  $('#entry.1331322704').blur(function () {
+    var icNum = document.getElementById('entry.1331322704').value
     console.log(icNum)
     var icArray = []
     // Check length of IC number
@@ -47,12 +47,12 @@ $(document).ready(function () {
       console.log(checkSum)
       if (checkSum === icArray[8]) {
         console.log('Valid NRIC Number')
-        $('#entry_1331322704').removeClass('error')
-        $('#entry_1331322704').addClass('valid')
+        $('#entry.1331322704').removeClass('error')
+        $('#entry.1331322704').addClass('valid')
       } else {
         console.log('Invalid NRIC Number')
-        $('#entry_1331322704').addClass('error')
-        $('#entry_1331322704').removeClass('valid')
+        $('#entry.1331322704').addClass('error')
+        $('#entry.1331322704').removeClass('valid')
       }
     }
   })
@@ -99,7 +99,7 @@ $(document).ready(function () {
   })
   // google maps auto fill for address
   var autocomplete = new google.maps.places.Autocomplete(
-    (document.getElementById('entry_687221628')),
+    (document.getElementById('entry.687221628')),
     {types: ['geocode']}
   )
   // when user chooses an address from the drop down it will fire off a place_changed service
@@ -108,8 +108,8 @@ $(document).ready(function () {
     var place = autocomplete.getPlace()
     console.log(place.address_components)
     var address1 = place.address_components[0].long_name + ' ' + place.address_components[1].long_name
-    document.getElementById('entry_687221628').value = address1
+    document.getElementById('entry.687221628').value = address1
     var postalCode = place.address_components[5].long_name
-    document.getElementById('entry_602308765').value = postalCode
+    document.getElementById('entry.602308765').value = postalCode
   }
 })
