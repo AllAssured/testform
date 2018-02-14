@@ -4,8 +4,15 @@ $(document).ready(function () {
   var hashParams = window.location.hash.substr(1).split('&')
   for (var i = 0; i < hashParams.length; i++) {
     var fieldsValue = hashParams[i].split('=')
-    document.getElementsByName(fieldsValue[0])[0].value = decodeURIComponent(fieldsValue[1])
-    console.log(fieldsValue)
+    // document.getElementsByClassName(fieldsValue[0]).value = decodeURIComponent(fieldsValue[1])
+    // console.log(fieldsValue)
+    if (i === 0) {
+      document.getElementById('entry_558224986').value = decodeURIComponent(fieldsValue[1])
+    } else if (i === 1) {
+      document.getElementById('entry_1515774175').value = decodeURIComponent(fieldsValue[1])
+    } else if (i === 2) {
+      document.getElementById('entry_781213997').value = decodeURIComponent(fieldsValue[1])
+    }
   }
   // NRIC number validation if its a proper number
   $('#entry_1331322704').blur(function () {
