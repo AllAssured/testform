@@ -105,6 +105,10 @@ $(document).ready(function () {
     (document.getElementById('entry_687221628')),
     {types: ['geocode']}
   )
+  // Set initial restrict to the greater list of countries.
+  autocomplete.setComponentRestrictions(
+       {'country': ['SG']})
+
   // when user chooses an address from the drop down it will fire off a place_changed service
   autocomplete.addListener('place_changed', fillInAddress)
   function fillInAddress () {
