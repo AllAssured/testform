@@ -86,7 +86,7 @@ $(document).ready(function () {
         }
       }
       // find the nearest tenth of the current IMEI number weight
-      checkImeiSum = (Math.round(imeiWeight / 10) * 10) - imeiWeight
+      checkImeiSum = (Math.ceil(imeiWeight / 10) * 10) - imeiWeight
       // check if the last number of the imei is the same as the difference between the IMEI number weight and nearest tenth
       if (lastImeiNum === checkImeiSum) {
         console.log('IMEI is valid')
