@@ -4,8 +4,6 @@ $(document).ready(function () {
   var hashParams = window.location.hash.substr(1).split('&')
   for (var i = 0; i < hashParams.length; i++) {
     var fieldsValue = hashParams[i].split('=')
-    // document.getElementsByClassName(fieldsValue[0]).value = decodeURIComponent(fieldsValue[1])
-    // console.log(fieldsValue)
     if (i === 0) {
       document.getElementById('entry_558224986').value = decodeURIComponent(fieldsValue[1])
     } else if (i === 1) {
