@@ -4,11 +4,21 @@ $(document).ready(function () {
   var hashParams = window.location.hash.substr(1).split('&')
   for (var i = 0; i < hashParams.length; i++) {
     var fieldsValue = hashParams[i].split('=')
-    if (i === 0) {
+    // if (i === 0) {
+    //   document.getElementById('entry_781213997').value = decodeURIComponent(fieldsValue[1])
+    //   console.log('tick')
+    // } else if (i === 1) {
+    //   document.getElementById('entry_558224986').value = decodeURIComponent(fieldsValue[1])
+    //   console.log('teck')
+    // } else if (i === 2) {
+    //   document.getElementById('entry_1515774175').value = decodeURIComponent(fieldsValue[1])
+    //   console.log('tock')
+    // }
+    if (fieldsValue[0] === 'first_name') {
       document.getElementById('entry_558224986').value = decodeURIComponent(fieldsValue[1])
-    } else if (i === 1) {
+    } else if (fieldsValue[0] === 'last_name') {
       document.getElementById('entry_1515774175').value = decodeURIComponent(fieldsValue[1])
-    } else if (i === 2) {
+    } else if (fieldsValue[0] === 'email') {
       document.getElementById('entry_781213997').value = decodeURIComponent(fieldsValue[1])
     }
   }
