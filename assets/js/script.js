@@ -25,7 +25,8 @@ $(document).ready(function () {
   // NRIC number validation if its a proper number
   $('#entry_1331322704').blur(function () {
     var icNum = document.getElementById('entry_1331322704').value
-    console.log('test')
+    icNum = icNum.toUpperCase()
+    document.getElementById('entry_1331322704').value = icNum
     console.log(icNum)
     var icArray = []
     // Check length of IC number
